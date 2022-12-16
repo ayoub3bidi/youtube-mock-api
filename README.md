@@ -6,3 +6,7 @@ A simple Flask YouTube clone backend API.
 pip install -r requirements.txt
 ```
 This wil install all needed requirements.  
+```
+python main.py
+```
+This will start the server.
