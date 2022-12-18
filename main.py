@@ -22,13 +22,19 @@ names = {'tim': {'age': 19, 'gender': 'male' },'bill': {'age': 24 , 'gender': 'm
 
 videos = {}
 
+def abort_if_video_id_doesnt_exist(video_id):
+    if video_id not in videos:
+        abort(404, message="Video id is not valid...")
+
 class Video(Resource):
     def get(self, video_id):
+        abort_if_video_id_doesnt_exist(video_id)
         return videos[video_id]
 
     def put(self, video_id):
         args = video_put_args.parse_args()
-        return {video_id: args}
+        videos[video_id] = args
+        return videos[video_id], 201
 
 api.add_resource(Video, '/video/<int:video_id>')
 
