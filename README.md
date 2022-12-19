@@ -9,4 +9,8 @@ This wil install all needed requirements.
 ```
 python main.py
 ```
-This will start the server.
+This will start the server.  
+```
+python test-request.py
+```
+This will run the requests.  
