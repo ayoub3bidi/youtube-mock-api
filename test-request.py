@@ -13,8 +13,5 @@ for i in range(len(data)):
     print(response.json())
 
 input()
-response = requests.delete(BaseURL + "/video/2")
-print(response.json())
-input()
-response = requests.put(BaseURL + "/video/6")
+response = requests.put(BaseURL + "/video/98")
 print(response.json())
